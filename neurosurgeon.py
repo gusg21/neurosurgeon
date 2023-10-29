@@ -25,6 +25,12 @@ def n_favorite_words(data, args):
         line += "{" + pair[0] + "}, "
     print(quickwrap(line))
 
+def n_zapf(data, _):
+    sorted_assocs = sorted(data.items(), key=lambda item: len(item[1]))
+    sorted_assocs.reverse()
+    for pair in sorted_assocs:
+        print(pair[0] + ", " + str(len(pair[1])))
+
 # counts words it knows
 def n_word_count(data, _):
     print("Known words: " + str(len(data)))
