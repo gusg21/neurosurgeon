@@ -25,7 +25,7 @@ def n_favorite_words(data, args):
         line += "{" + pair[0] + "}, "
     print(quickwrap(line))
 
-def n_zapf(data, _):
+def n_zipf(data, _):
     sorted_assocs = sorted(data.items(), key=lambda item: len(item[1]))
     sorted_assocs.reverse()
     for pair in sorted_assocs:
